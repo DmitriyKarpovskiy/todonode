@@ -6,7 +6,8 @@ const app = express();
 // устанавливаем обработчик для маршрута "/"
 app.get("/", function(request, response) {
 
-    response.end("Hello from Express!");
+    //response.send("<h2>Привет Express!</h2>");
+    response.sendStatus(200);
 });
 // начинаем прослушивание подключений на 3000 порту
 app.listen(3000);
