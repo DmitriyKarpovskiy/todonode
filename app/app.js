@@ -1,5 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
+const router = express.Router();
+const db = require('./db');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
