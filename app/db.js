@@ -9,3 +9,9 @@ const MONGO_DB = 'todo';
 const url = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin`;
 
 mongoose.connect(url, { useNewUrlParser: true });
+
+mongoose.Promise = global.Promise();
+
+let db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
