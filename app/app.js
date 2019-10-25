@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 const router = express.Router();
 const db = require('./db');
+const $ = require('jquery');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
@@ -42,6 +43,8 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
+
+app.use(express.static(__dirname + '/public'));
 
 module.exports = app;
 

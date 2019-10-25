@@ -1,8 +1,8 @@
 <html>
 <head>
 <title>Your Title Here</title>
-<link rel="stylesheet" href="../public/stylesheets/auth.css">
-<script src="../public/javascripts/auth.js"></script>
+<link rel="stylesheet" href="stylesheets/auth.css">
+<script src="javascripts/auth.js"></script>
 </head>
 <body>
   <div class="login-page">
