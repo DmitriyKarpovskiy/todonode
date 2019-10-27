@@ -10,7 +10,7 @@ const MONGO_DB = 'todo';
 const url = 'mongodb://127.0.0.1/todo';
 try {
     mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
-    console.log("OK");
+    console.log("Connected to database server");
 } catch (ex) {
     throw new Error('Error');
 }
